@@ -1,0 +1,53 @@
+// -*- mode: adoc -*-
+
+= My Awesome Book
+Dave Null <email@example.com>
+
+[preface]
+== First chapter of that awesome book
+
+Here's some content. Everything is in http://www.methods.co.nz/asciidoc/[AsciiDoc] format.
+
+If you like, you can even use some http://graphviz.org[Graphviz] inline.
+
+.Some diagram
+[graphviz]
+--------------------------------------------------
+digraph unix {
+    node [color=lightblue2, style=filled];
+    graph [
+        rankdir = "LR"
+    ];
+
+    "topdir" [
+        label="foobar"
+        shape="rect"
+    ];
+    topdir -> baz;
+    topdir -> bim;
+}
+--------------------------------------------------
+
+Obviously you can also include code with some footline:
+
+.Some Python
+==================================================
+[source,python]
+--------------------------------------------------
+class A(object):
+    pass <1>
+--------------------------------------------------
+<1> This does nothing.
+==================================================
+
+You can also include footnote footnote:[For real] in any page.
+
+[TIP]
+Writing book is awesome!
+
+It also work with image, it's quite simple:
+
+image::img/snake.png[width="100"]
+
+[NOTE]
+The entire file format is described in the AsciiDoc documentation.

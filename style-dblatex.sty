@@ -1,0 +1,41 @@
+\PassOptionsToPackage{explicit}{titlesec}
+
+\RequirePackageWithOptions{asciidoc-dblatex}
+\usepackage{asciidoc-dblatex}
+
+\usepackage{fontspec}
+\setmainfont[Scale=1.25]{Source Sans Pro}
+\setsansfont{Liberation Sans}
+
+%% line spacing
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{wallpaper}
+
+\titlespacing{\chapter}{0pt}{0cm}{4cm}
+
+\pagestyle{headings}
+
+\usepackage[absolute]{textpos}
+
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \begin{textblock*}{297mm}(25mm,25mm)
+      \includegraphics[height=298mm,width=211mm]{img/cover.png}
+    \end{textblock*}
+    %% To have an empty page
+    \mbox{}
+    \newpage
+    \par © 2016 Dave Null. All rights reserved.
+  \end{titlepage}
+}
+
+%% Fix a bug with dblatex, there's no enough space after the example title.
+\let\oldlongfloat\longfloat
+\renewenvironment{longfloat}[2]{
+  \begin{oldlongfloat}{#1}{#2}
+   \vspace{5mm}
+}{
+ \end{oldlongfloat}
+}

@@ -1,0 +1,33 @@
+<authorgroup>
+  <author>
+    <firstname>Dave</firstname>
+    <surname>Null</surname>
+  </author>
+</authorgroup>
+
+<copyright>
+  <year>2016</year>
+  <holder>Dave Null</holder>
+</copyright>
+
+<revhistory>
+  <revision>
+    <revnumber>1.0</revnumber>
+    <date>September 2016</date>
+    <authorinitials>DN</authorinitials>
+    <revremark>
+      First Edition.
+    </revremark>
+  </revision>
+</revhistory>
+
+<mediaobject role="cover">
+  <imageobject>
+     <imagedata
+        fileref="img/cover.png"
+        format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>My Awesome Book</phrase>
+  </textobject>
+</mediaobject>

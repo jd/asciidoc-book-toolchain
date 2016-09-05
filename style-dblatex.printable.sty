@@ -1,0 +1,45 @@
+\RequirePackageWithOptions{asciidoc-dblatex}
+\usepackage{asciidoc-dblatex}
+
+\usepackage{fontspec}
+\setmainfont[Scale=1]{Source Sans Pro}
+\setsansfont{Liberation Sans}
+\setmonofont[Scale=0.8]{Liberation Mono}
+
+%% line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+\titleformat{\chapter}[display]
+            {\bfseries\Huge}
+            {\vspace{5pt}
+              \Large\color{black}
+              \chaptertitlename
+              \space
+              \thechapter}
+            {0.5cm}
+            {
+              \thispagestyle{empty}
+            }
+
+\titlespacing{\chapter}{0pt}{0pt}{1in}[0.5in]
+
+\usepackage{microtype}
+
+\pagestyle{headings}
+
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+  \end{titlepage}
+  \newpage
+  \par © 2016 Dave Null. All rights reserved.
+}
+
+%% Fix a bug with dblatex, there's no enough space after the example title.
+\let\oldlongfloat\longfloat
+\renewenvironment{longfloat}[2]{
+  \begin{oldlongfloat}{#1}{#2}
+    \vspace{5mm}
+}{
+  \end{oldlongfloat}
+}
