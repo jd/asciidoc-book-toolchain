@@ -12,7 +12,7 @@ This repository contains a basic toolchain used to publish book using
 This toolchain has been created and is used in the first place to publish
 [The Hacker's Guide to Python].
 
-# Require software:
+# Required software
 - [AsciiDoc]
 - Xetex
 - [Calibre]
