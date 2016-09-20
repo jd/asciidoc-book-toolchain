@@ -10,7 +10,7 @@ release: $(BOOKNAME).html $(BOOKNAME).pdf $(BOOKNAME).epub $(BOOKNAME).mobi Make
 %.pdf: %.txt Makefile style-dblatex.xsl style-dblatex.sty
 	a2x -fpdf -dbook --dblatex-opts="-d -p style-dblatex.xsl -b xetex --texstyle=style-dblatex.sty" $<
 
-$(BOOKNAME).printable.pdf: $(BOOKNAME).txt Makefile style-dblatex.printable.xsl style-dblatex.printable.sty chapter-background.png
+$(BOOKNAME).printable.pdf: $(BOOKNAME).txt Makefile style-dblatex.printable.xsl style-dblatex.printable.sty
 	test ! -f $(BOOKNAME).pdf || mv -f $(BOOKNAME).pdf $(BOOKNAME).moved.pdf
 	a2x -fpdf -dbook --dblatex-opts="-d -p style-dblatex.printable.xsl -b xetex --texstyle=style-dblatex.printable.sty" $(BOOKNAME).txt
 	mv -f $(BOOKNAME).pdf $@
