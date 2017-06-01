@@ -17,6 +17,7 @@ This toolchain has been created and is used in the first place to publish
 - Xetex
 - [Calibre]
 - [Ghostscript]
+- [Docbook]
 
 ## Usage
 
@@ -42,3 +43,4 @@ paper, so it does not include the cover and have slightly different dimensions.
    [The Hacker's Guide to Python]: <https://thehackerguidetopython.com>
    [Calibre]: https://calibre-ebook.com/
    [Ghostscript]: http://www.ghostscript.com/
+   [Docbook]: https://pypi.python.org/pypi/docbook
