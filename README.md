@@ -19,6 +19,10 @@ This toolchain has been created and is used in the first place to publish
 - [Ghostscript]
 - [Docbook]
 
+If you run on a Fedora system, just run the `deps` target of the makefile as root to install them like in :
+
+ - sudo make deps
+
 ## Usage
 
 The book content should be written in the `book.txt` source file. Once you've
