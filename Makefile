@@ -29,4 +29,8 @@ $(BOOKNAME).html: $(BOOKNAME).txt Makefile
 clean:
 	rm -rf $(TARGET) $(BOOKNAME)__*.png
 
+deps:
+	# Needed packages on a Fedora system
+	lsb_release -is | grep -qw Fedora && dnf install asciidoc dblatex texlive-euenc texlive-wallpaper adobe-source-sans-pro-fonts
+
 .PHONY: clean release
